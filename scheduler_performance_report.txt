@@ -1,0 +1,30 @@
+================================================================================
+SCHEDULER PERFORMANCE ANALYSIS REPORT
+================================================================================
+Total Jobs Tested: 100
+Number of Schedulers: 7
+
+PERFORMANCE SUMMARY
+--------------------------------------------------------------------------------
+Scheduler            Completed  Throughput   Avg Wait   GPU Util  
+--------------------------------------------------------------------------------
+FIFO                 0          0.0          0.0        0.0       
+SJF                  0          0.0          0.0        0.0       
+Shortest             0          0.0          0.0        0.0       
+Shortest-GPU         0          0.0          0.0        0.0       
+Hybrid-Priority      0          0.0          0.0        0.0       
+Predictive-Backfill  0          0.0          0.0        0.0       
+Smart-Batch          0          0.0          0.0        0.0       
+
+DETAILED ANALYSIS
+--------------------------------------------------------------------------------
+Best Throughput: FIFO (0.0 jobs/hour)
+Best Wait Time: FIFO (0.0s)
+Best GPU Utilization: FIFO (0.0%)
+Best Fairness: FIFO (variance: 0.0)
+
+RECOMMENDATIONS
+--------------------------------------------------------------------------------
+ FIFO appears to be the best overall performer
+ For maximum GPU utilization: FIFO
+  For fairest scheduling: FIFO
