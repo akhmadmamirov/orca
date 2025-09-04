@@ -7,6 +7,7 @@ from models.job import Job
 from .base import Scheduler
 
 
+
 class FIFOScheduler(Scheduler):
     """First-in-first-out scheduler"""
     
@@ -17,4 +18,5 @@ class FIFOScheduler(Scheduler):
         if not pending_jobs:
             return None
         # Return the job with earliest submit time
+        # To Do: rewrite using queue
         return min(pending_jobs, key=lambda j: j.submit_time) 

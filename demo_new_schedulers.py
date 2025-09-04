@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Demonstration of New Schedulers
-Shows the three new schedulers that replace the failed adaptive scheduler
 """
 
 import time

@@ -3,7 +3,12 @@ Node representation for GPU Cluster Management System
 """
 
 from typing import List, Dict
-
+# This is simplified node represeation, possilbe extensions
+# Placment: 1 job can require multiple GPUs that can exceed node's total GPU count
+# To Do: splitting logic across multiple nodes
+# There is 1 to 1 mapping between gpu_id and job_id
+# To Do: adding MIG support
+# To Do: adding locks to the allocation and deallocation of GPUs
 
 class Node:
     """Represents a compute node with GPUs"""
@@ -31,7 +36,7 @@ class Node:
         """Allocate GPUs to a job"""
         if not self.can_allocate(num_gpu):
             return []
-        
+
         allocated_gpu_ids = []
         for i in range(self.num_gpu):
             if i not in self.gpu_allocations and len(allocated_gpu_ids) < num_gpu:
